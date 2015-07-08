@@ -18,5 +18,7 @@
 
         <activity android:name="ShakeActivity"/>
         <activity android:name="TextPushActivity"/>
+        <activity android:name=".Activity"/>
+        <activity android:name=".TestViewActivity"/>
     </application>
 </manifest>

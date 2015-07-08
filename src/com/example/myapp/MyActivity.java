@@ -12,6 +12,8 @@ import android.widget.Button;
 public class MyActivity extends Activity {
 
     private static final String TAG = "MyActivity";
+
+    private String[] activities = new String[]{"ShakeActivity", "TextPushActivity", "TestViewActivity"};
     /**
      * Called when the activity is first created.
      */
@@ -27,28 +29,43 @@ public class MyActivity extends Activity {
 
         ViewGroup root = (ViewGroup)findViewById(R.id.root);
 
-        Button btn = new Button(this);
-        btn.setText("shake");
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in = new Intent();
-                in.setClass(MyActivity.this, ShakeActivity.class);
-                startActivity(in);
-            }
-        });
-        root.addView(btn);
+        for(final String s : activities){
+            Button btn = new Button(this);
+            btn.setText(s.substring(0, s.indexOf("Activity")));
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent in = new Intent();
+                    in.setClass(MyActivity.this, ShakeActivity.class);
+                    in.setClassName(MyActivity.this, "com.example.myapp." + s);
+                    startActivity(in);
+                }
+            });
+            root.addView(btn);
+        }
 
-        btn = new Button(this);
-        btn.setText("push");
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in = new Intent();
-                in.setClass(MyActivity.this, TextPushActivity.class);
-                startActivity(in);
-            }
-        });
-        root.addView(btn);
+//        Button btn = new Button(this);
+//        btn.setText("shake");
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent in = new Intent();
+//                in.setClass(MyActivity.this, ShakeActivity.class);
+//                startActivity(in);
+//            }
+//        });
+//        root.addView(btn);
+//
+//        btn = new Button(this);
+//        btn.setText("push");
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent in = new Intent();
+//                in.setClass(MyActivity.this, TextPushActivity.class);
+//                startActivity(in);
+//            }
+//        });
+//        root.addView(btn);
     }
 }
