@@ -2,6 +2,7 @@ package com.example.myapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -9,11 +10,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import java.util.List;
+
 public class MyActivity extends Activity {
 
     private static final String TAG = "MyActivity";
 
-    private String[] activities = new String[]{"ShakeActivity", "TextPushActivity", "TestViewActivity"};
+    private String[] activities = new String[]{"ShakeActivity",
+            "TextPushActivity",
+            "TestViewActivity",
+            "FocusActivity",
+            "WindowActivity",
+            "ScrollActivity",
+            "TestBallActivity",
+            "LayoutActivity",
+            "BitmapActivity",
+            "FontActivity",
+            "ArcsActivity",
+            "ClipActivity",
+    "DensityActivity", "DrawableActivity","TestDrawableActivity", "MyPaintActivity"};
     /**
      * Called when the activity is first created.
      */
@@ -38,6 +53,15 @@ public class MyActivity extends Activity {
                     Intent in = new Intent();
                     in.setClass(MyActivity.this, ShakeActivity.class);
                     in.setClassName(MyActivity.this, "com.example.myapp." + s);
+
+                    List<ResolveInfo> resolveInfos = getPackageManager().queryIntentActivities(in, 0);
+
+                    Log.i(TAG, "resolveInfos: " + resolveInfos.size());
+
+                    if(resolveInfos.size() > 0){
+                        Log.i(TAG, "resolveInfos.get(0).activityInfo:" + resolveInfos.get(0).activityInfo);
+                    }
+
                     startActivity(in);
                 }
             });

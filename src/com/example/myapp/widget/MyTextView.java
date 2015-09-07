@@ -23,6 +23,26 @@ public class MyTextView extends View {
     }
 
     @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+
+        int mode = MeasureSpec.getMode(widthMeasureSpec);
+        int size = MeasureSpec.getSize(widthMeasureSpec);
+
+        Log.i("MyTextView", String.format("mode:%d size:%d", mode, size));
+
+        if(mode == MeasureSpec.EXACTLY){
+            Log.i("MyTextView", "EXACTLY");
+        }else if(mode == MeasureSpec.AT_MOST){
+            Log.i("MyTextView", "AT_MOST");
+        }else if(mode == MeasureSpec.UNSPECIFIED){
+            Log.i("MyTextView", "UNSPECIFIED");
+        }
+
+
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
+
+    @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         int w = getWidth();

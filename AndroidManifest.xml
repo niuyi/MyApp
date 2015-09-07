@@ -20,5 +20,18 @@
         <activity android:name="TextPushActivity"/>
         <activity android:name=".Activity"/>
         <activity android:name=".TestViewActivity"/>
+        <activity android:name=".FocusActivity"/>
+        <activity android:name=".WindowActivity"/>
+        <activity android:name=".ScrollActivity"/>
+        <activity android:name=".TestBallActivity"/>
+        <activity android:name=".LayoutActivity"/>
+        <activity android:name=".BitmapActivity"/>
+        <activity android:name=".FontActivity"/>
+        <activity android:name=".ArcsActivity"/>
+        <activity android:name=".ClipActivity"/>
+        <activity android:name=".DensityActivity"/>
+        <activity android:name=".DrawableActivity"/>
+        <activity android:name=".MyPaintActivity"/>
+        <activity android:name=".TestDrawableActivity"/>
     </application>
 </manifest>
