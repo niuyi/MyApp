@@ -33,5 +33,6 @@
         <activity android:name=".DrawableActivity"/>
         <activity android:name=".MyPaintActivity"/>
         <activity android:name=".TestDrawableActivity"/>
+        <activity android:name=".MeasureTextActivity"/>
     </application>
 </manifest>
