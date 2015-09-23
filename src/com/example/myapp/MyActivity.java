@@ -28,7 +28,7 @@ public class MyActivity extends Activity {
             "FontActivity",
             "ArcsActivity",
             "ClipActivity",
-    "DensityActivity", "DrawableActivity","TestDrawableActivity", "MyPaintActivity", "MeasureTextActivity"};
+    "DensityActivity", "DrawableActivity","TestDrawableActivity", "MyPaintActivity", "MeasureTextActivity", "TextAlignActivity", "Scroll2Activity", "RListActivity"};
     /**
      * Called when the activity is first created.
      */

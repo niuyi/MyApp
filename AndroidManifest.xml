@@ -34,5 +34,8 @@
         <activity android:name=".MyPaintActivity"/>
         <activity android:name=".TestDrawableActivity"/>
         <activity android:name=".MeasureTextActivity"/>
+        <activity android:name=".TextAlignActivity"/>
+        <activity android:name=".Scroll2Activity"/>
+        <activity android:name=".RListActivity"/>
     </application>
 </manifest>
