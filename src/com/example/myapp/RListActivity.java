@@ -3,51 +3,111 @@ package com.example.myapp;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v17.leanback.widget.VerticalGridView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import com.example.myapp.widget.GridLayoutManager;
+import com.example.myapp.widget.VerticalGridView;
+
+import java.util.ArrayList;
+import java.util.List;
 //import com.example.myapp.widget.GridLayoutManager;
 
 /**
  * Created by linniu on 2015/9/23.
  */
-public class RListActivity extends Activity {
+public class RListActivity extends Activity implements VerticalGridView.FocusSearchListener {
     private static final String TAG = "RListActivity";
+    private Button button;
+    private VerticalGridView list;
+    private MyAdapter adapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.r_list_activity);
 
-        VerticalGridView list = (VerticalGridView)findViewById(R.id.list_view);
+        button = (Button)findViewById(R.id.test_btn);
+
+        list = (VerticalGridView)findViewById(R.id.list_view);
         list.setFocusable(true);
+//        list.setLayoutManager(new GridLayoutManager(this, 2));
 //        list.setSelectedPosition(20);
-        list.setAdapter(new MyAdapter());
+        adapter = new MyAdapter();
+        list.setAdapter(adapter);
+
+
+
+
+//        list.setFocusSearchListener(this);
+
 //        list.requestFocus();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
+    @Override
+    public void onFocusSearch() {
+        button.requestFocus();
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+
+        TextView tv;
+        Button btn1;
+        Button btn2;
 
         public MyViewHolder(View itemView) {
             super(itemView);
+            tv = (TextView)itemView.findViewById(R.id.tv);
+            btn1 = (Button)itemView.findViewById(R.id.btn_1);
+            btn2 = (Button)itemView.findViewById(R.id.btn_2);
+
+            btn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int selectedPosition = list.getSelectedPosition();
+                    adapter.setItem(selectedPosition, "test1");
+                    adapter.notifyDataSetChanged();
+                }
+            });
+
+            btn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int selectedPosition = list.getSelectedPosition();
+                    adapter.setItem(selectedPosition, "test2");
+                    adapter.notifyDataSetChanged();
+
+//                    list.requestLayout();
+                }
+            });
         }
     }
 
     class MyAdapter extends RecyclerView.Adapter{
 
+
+        List<String> list = new ArrayList<String>();
+        public MyAdapter() {
+            for(int i = 0 ; i < 1 ; i++){
+                list.add("Test: " + i);
+            }
+        }
+
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            TextView tv = new TextView(RListActivity.this);
-            tv.setFocusable(true);
 
-            tv.setBackground(getResources().getDrawable(R.drawable.btn_normal));
+            LayoutInflater layoutInflater = LayoutInflater.from(RListActivity.this);
+
+            View view = layoutInflater.inflate(R.layout.list_item, null);
+//            view.setFocusable(true);
+            view.setBackground(getResources().getDrawable(R.drawable.btn_normal));
 
             GridLayoutManager.LayoutParams para = new GridLayoutManager.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 150);
-            tv.setLayoutParams(para);
+            view.setLayoutParams(para);
 
 //            tv.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 //                @Override
@@ -69,18 +129,22 @@ public class RListActivity extends Activity {
 //                }
 //            });
 
-            return new MyViewHolder(tv);
+            return new MyViewHolder(view);
         }
 
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
             MyViewHolder holder = (MyViewHolder)viewHolder;
-            ((TextView)holder.itemView).setText("test: " + i);
+            holder.tv.setText(list.get(i));
         }
 
         @Override
         public int getItemCount() {
-            return 50;
+            return list.size();
+        }
+
+        public void setItem(int index, String val){
+            list.set(index, val);
         }
     }
 }

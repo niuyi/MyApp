@@ -18,6 +18,7 @@ import android.content.res.TypedArray;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.util.TypedValue;
+import android.view.View;
 import com.example.myapp.R;
 
 /**
@@ -25,6 +26,8 @@ import com.example.myapp.R;
  * the {@link Adapter} associated with this view.
  */
 public class VerticalGridView extends BaseGridView {
+
+    private static final String TAG = "VerticalGridView";
 
     public VerticalGridView(Context context) {
         this(context, null);
@@ -38,6 +41,23 @@ public class VerticalGridView extends BaseGridView {
         super(context, attrs, defStyle);
         mLayoutManager.setOrientation(RecyclerView.VERTICAL);
         initAttributes(context, attrs);
+    }
+
+    @Override
+    public View focusSearch(View focused, int direction) {
+        View view = super.focusSearch(focused, direction);
+
+        android.util.Log.i(TAG, "focusSearch: " + view + " dir: " + direction);
+
+        if(mFocusSearchListener != null){
+            int pos = getSelectedPosition();
+            if(pos < mColumnWidth && direction == View.FOCUS_UP){
+                mFocusSearchListener.onFocusSearch();
+                return null;
+            }
+        }
+
+        return view;
     }
 
     protected void initAttributes(Context context, AttributeSet attrs) {
@@ -73,8 +93,22 @@ public class VerticalGridView extends BaseGridView {
      * @param width May be WRAP_CONTENT, or a size in pixels. If zero,
      * column width will be fixed based on number of columns and view width.
      */
+
+    private int mColumnWidth = 1;
+
     public void setColumnWidth(int width) {
+        mColumnWidth = width;
         mLayoutManager.setRowHeight(width);
         requestLayout();
+    }
+
+    private FocusSearchListener mFocusSearchListener;
+
+    public void setFocusSearchListener(FocusSearchListener listener){
+        mFocusSearchListener = listener;
+    }
+
+    public interface FocusSearchListener{
+        public void onFocusSearch();
     }
 }

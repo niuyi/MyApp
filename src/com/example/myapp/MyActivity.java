@@ -16,7 +16,7 @@ public class MyActivity extends Activity {
 
     private static final String TAG = "MyActivity";
 
-    private String[] activities = new String[]{"ShakeActivity",
+    private String[] activities = new String[]{"RListActivity", "ShakeActivity",
             "TextPushActivity",
             "TestViewActivity",
             "FocusActivity",
@@ -28,7 +28,7 @@ public class MyActivity extends Activity {
             "FontActivity",
             "ArcsActivity",
             "ClipActivity",
-    "DensityActivity", "DrawableActivity","TestDrawableActivity", "MyPaintActivity", "MeasureTextActivity", "TextAlignActivity", "Scroll2Activity", "RListActivity"};
+    "DensityActivity", "DrawableActivity","TestDrawableActivity", "MyPaintActivity", "MeasureTextActivity", "TextAlignActivity", "Scroll2Activity"};
     /**
      * Called when the activity is first created.
      */

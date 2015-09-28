@@ -173,6 +173,7 @@ abstract class BaseGridView extends RecyclerView {
     public BaseGridView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         mLayoutManager = new GridLayoutManager(this);
+        mLayoutManager.setFocusOutAllowed(true, true);
         setLayoutManager(mLayoutManager);
         setDescendantFocusability(FOCUS_AFTER_DESCENDANTS);
         setHasFixedSize(true);
