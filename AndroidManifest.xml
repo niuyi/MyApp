@@ -39,8 +39,35 @@
         <activity android:name=".ParcelableActivity"/>
         <activity android:name=".HtmlActivity"/>
 
+        <!--<activity android:name=".AActivity"/>-->
+        <!--<activity android:name=".BActivity" android:launchMode="singleTask" android:taskAffinity="com.example.myapp1"/>-->
+        <!--<activity android:name=".CActivity" />-->
+
         <activity android:name=".AActivity"/>
-        <activity android:name=".BActivity" android:launchMode="singleTask" android:taskAffinity="com.example.myapp1"/>
+        <activity android:name=".BActivity">
+            <intent-filter>
+                <!--<action android:name="com.example.myapp.Action.TEST"/>-->
+                <!--<action android:name="com.example.myapp.Action.TEST2"/>-->
+                <category android:name="com.example.myapp.category.TEST"/>
+                <category android:name="com.example.myapp.category.TEST2"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+        </intent-filter>
+
+            <!--<intent-filter>-->
+                <!--<action android:name="com.example.myapp.Action.TEST"/>-->
+                <!--<action android:name="com.example.myapp.Action.TEST2"/>-->
+                <!--<category android:name="com.example.myapp.category.TEST3"/>-->
+                <!--<category android:name="android.intent.category.DEFAULT"/>-->
+            <!--</intent-filter>-->
+        </activity>
         <activity android:name=".CActivity" />
+        <receiver android:name=".MyReceiver">
+            <intent-filter>
+                <action android:name="com.example.myapp.Action.TEST"/>
+                <!--<action android:name="com.example.myapp.Action.TEST2"/>-->
+                <!--<category android:name="com.example.myapp.category.TEST"/>-->
+                <category android:name="com.example.myapp.category.TEST2"/>
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
