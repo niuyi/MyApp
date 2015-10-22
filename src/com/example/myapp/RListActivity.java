@@ -69,7 +69,7 @@ public class RListActivity extends Activity implements VerticalGridView.FocusSea
                 @Override
                 public void onClick(View v) {
                     int selectedPosition = list.getSelectedPosition();
-                    adapter.setItem(selectedPosition, "test1");
+                    adapter.setItem(selectedPosition, "test1 : " + selectedPosition);
                     adapter.notifyDataSetChanged();
                 }
             });
@@ -78,7 +78,7 @@ public class RListActivity extends Activity implements VerticalGridView.FocusSea
                 @Override
                 public void onClick(View v) {
                     int selectedPosition = list.getSelectedPosition();
-                    adapter.setItem(selectedPosition, "test2");
+                    adapter.setItem(selectedPosition, "test2: " + selectedPosition);
                     adapter.notifyDataSetChanged();
 
 //                    list.requestLayout();
@@ -92,7 +92,7 @@ public class RListActivity extends Activity implements VerticalGridView.FocusSea
 
         List<String> list = new ArrayList<String>();
         public MyAdapter() {
-            for(int i = 0 ; i < 1 ; i++){
+            for(int i = 0 ; i < 10 ; i++){
                 list.add("Test: " + i);
             }
         }
@@ -103,7 +103,7 @@ public class RListActivity extends Activity implements VerticalGridView.FocusSea
             LayoutInflater layoutInflater = LayoutInflater.from(RListActivity.this);
 
             View view = layoutInflater.inflate(R.layout.list_item, null);
-//            view.setFocusable(true);
+            view.setFocusable(false);
             view.setBackground(getResources().getDrawable(R.drawable.btn_normal));
 
             GridLayoutManager.LayoutParams para = new GridLayoutManager.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 150);

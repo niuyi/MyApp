@@ -1,6 +1,7 @@
 package com.example.myapp;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ public class MyActivity extends Activity {
 
     private static final String TAG = "MyActivity";
 
-    private String[] activities = new String[]{"RListActivity", "ParcelableActivity", "ShakeActivity",
+    private String[] activities = new String[]{"HtmlActivity", "RListActivity", "ParcelableActivity", "ShakeActivity",
             "TextPushActivity",
             "TestViewActivity",
             "FocusActivity",
@@ -91,5 +92,10 @@ public class MyActivity extends Activity {
 //            }
 //        });
 //        root.addView(btn);
+    }
+
+    @Override
+    public void startActivityFromFragment(Fragment fragment, Intent intent, int requestCode, Bundle options) {
+        super.startActivityFromFragment(fragment, intent, requestCode, options);
     }
 }

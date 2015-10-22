@@ -1510,6 +1510,15 @@ public final class GridLayoutManager extends RecyclerView.LayoutManager {
         } else {
             boolean hadFocus = mBaseGridView.hasFocus();
 
+            View oldFocusView = findViewByPosition(mFocusPosition);
+            View oldFocusSubView = null;
+            Rect oldRect = null;
+            if(oldFocusView instanceof  ViewGroup){
+                oldFocusSubView = ((ViewGroup)oldFocusView).getFocusedChild();
+                Log.i(TAG, "onLayoutChildren getOldFocusedChild: " + oldFocusSubView);
+                oldRect = new Rect(oldFocusSubView.getLeft(), oldFocusSubView.getTop(), oldFocusSubView.getRight(), oldFocusSubView.getBottom());
+            }
+
             mFocusPosition = init(mFocusPosition);
             if (mFocusPosition != savedFocusPos) {
                 if (DEBUG) Log.v(getTag(), "savedFocusPos " + savedFocusPos +
@@ -1557,7 +1566,20 @@ public final class GridLayoutManager extends RecyclerView.LayoutManager {
                 // we need force to initialize the child view's position
                 scrollToView(focusView, false);
                 if (focusView != null && hadFocus) {
-                    focusView.requestFocus();
+                    if(oldRect != null){
+                        Log.i(TAG, "old rect: " + oldRect);
+                        focusView.requestFocus(FOCUS_DOWN, oldRect);
+                    }else{
+                        focusView.requestFocus();
+                    }
+//                    int pos = ((ViewGroup)focusView).indexOfChild(oldFocusSubView);
+//                    Log.i(TAG, "onLayoutChildren getFocusedChild index: " + pos);
+//                    if(oldFocusSubView != null ){
+////                        focusView.requestFocus();
+//                        oldFocusSubView.requestFocus();
+//                    }else{
+//                        focusView.requestFocus();
+//                    }
                 }
                 appendVisibleItems();
                 prependVisibleItems();

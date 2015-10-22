@@ -38,5 +38,6 @@
         <activity android:name=".Scroll2Activity"/>
         <activity android:name=".RListActivity"/>
         <activity android:name=".ParcelableActivity"/>
+        <activity android:name=".HtmlActivity"/>
     </application>
 </manifest>
