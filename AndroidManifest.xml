@@ -61,6 +61,7 @@
             <!--</intent-filter>-->
         </activity>
         <activity android:name=".CActivity" />
+        <activity android:name=".ServiceActivity"/>
         <receiver android:name=".MyReceiver">
             <intent-filter>
                 <action android:name="com.example.myapp.Action.TEST"/>
@@ -69,5 +70,6 @@
                 <category android:name="com.example.myapp.category.TEST2"/>
             </intent-filter>
         </receiver>
+        <service android:name=".BookService" android:process=":remote"/>
     </application>
 </manifest>
