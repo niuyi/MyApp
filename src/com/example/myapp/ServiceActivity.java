@@ -77,9 +77,9 @@ public class ServiceActivity extends Activity {
 
                     manager.addListener(listener);
 
-                    SystemClock.sleep(500);
-
-                    manager.removeListener(listener);
+//                    SystemClock.sleep(500);
+//
+//                    manager.removeListener(listener);
 
 
                 } catch (RemoteException e) {
