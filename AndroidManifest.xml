@@ -71,6 +71,7 @@
         <activity android:name=".ServiceActivity"/>
         <activity android:name=".LitepalActivity"/>
         <activity android:name=".LitepalActivity"/>
+        <activity android:name=".FocusTestActivity"/>
         <receiver android:name=".MyReceiver">
             <intent-filter>
                 <action android:name="com.example.myapp.Action.TEST"/>
