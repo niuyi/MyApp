@@ -5,7 +5,7 @@
 
        <com.example.myapp.widget.MyButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:tag="button1"/>
 
-       <com.example.myapp.widget.MyLinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:tag="MyLinearLayout" android:layout_marginTop="300px">
+       <com.example.myapp.widget.MyLinearLayout android:id="@+id/my_linear_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tag="MyLinearLayout" android:layout_marginTop="300px" android:descendantFocusability="afterDescendants">
               <com.example.myapp.widget.MyButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2" android:tag="button2"/>
               <com.example.myapp.widget.MyButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3" android:tag="button3"/>
               <com.example.myapp.widget.MyButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4" android:tag="button4"/>

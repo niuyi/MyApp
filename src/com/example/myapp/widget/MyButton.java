@@ -27,15 +27,17 @@ public class MyButton extends Button {
 
     @Override
     public View findFocus() {
+        Log.i("FocusTestActivity", "findFocus: " + getTag() + " ,start");
         View view = super.findFocus();
         Log.i("FocusTestActivity", "findFocus: " + getTag() + " ,result: " + view.getTag());
-        Exception exception = new Exception("findFocus");
-        exception.printStackTrace();
+//        Exception exception = new Exception("findFocus");
+//        exception.printStackTrace();
         return view;
     }
 
     @Override
     public View focusSearch(int direction) {
+        Log.i("FocusTestActivity", "focusSearch: " + getTag() + " ,start");
         View view = super.focusSearch(direction);
         Log.i("FocusTestActivity", "focusSearch: " + getTag() + " ,result: " + view.getTag());
         return view;
@@ -43,6 +45,7 @@ public class MyButton extends Button {
 
     @Override
     public boolean requestFocus(int direction, Rect previouslyFocusedRect) {
+        Log.i("FocusTestActivity", "requestFocus: " + getTag() + " ,start");
         boolean result = super.requestFocus(direction, previouslyFocusedRect);
         Log.i("FocusTestActivity", "requestFocus: " + getTag() + ", previouslyFocusedRect: " + previouslyFocusedRect + " ,result: " + result);
         return result;

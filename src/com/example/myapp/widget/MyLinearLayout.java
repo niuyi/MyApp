@@ -27,16 +27,31 @@ public class MyLinearLayout extends LinearLayout {
 
     @Override
     public View findFocus() {
+        Log.i("FocusTestActivity", "findFocus: " + getTag() + " ,start");
         View view = super.findFocus();
         Log.i("FocusTestActivity", "findFocus: " + getTag() + " ,result: " + view.getTag());
+        Exception e = new Exception("MyLinearLayout findFocus");
+        e.printStackTrace();
         return view;
     }
 
     @Override
     public View focusSearch(View focused, int direction) {
+        Log.i("FocusTestActivity", "focusSearch: " + getTag() + " ,start");
         View view = super.focusSearch(focused, direction);
-        Log.i("FocusTestActivity", "focusSearch: " + getTag() + ", focused: " + focused.getTag() + " ,result: " + view.getTag());
+        Log.i("FocusTestActivity", "focusSearch: " + getTag() + ", focused: " + getViewTag(focused) + " ,result: " + view.getTag());
         return view;
+    }
+
+    private String getViewTag(View focused) {
+        if(focused == null)
+            return "null";
+
+        return (String)focused.getTag();
+    }
+
+    private Object getTag(View focused) {
+        return focused.getTag();
     }
 
     @Override
@@ -47,13 +62,17 @@ public class MyLinearLayout extends LinearLayout {
 
     @Override
     protected boolean onRequestFocusInDescendants(int direction, Rect previouslyFocusedRect) {
-        boolean result = super.onRequestFocusInDescendants(direction, previouslyFocusedRect);
-        Log.i("FocusTestActivity", "onRequestFocusInDescendants: " + getTag() + ", previouslyFocusedRect: " + previouslyFocusedRect + " ,result: " + result);
-        return result;
+//        Log.i("FocusTestActivity", "onRequestFocusInDescendants: " + getTag() + ", previouslyFocusedRect: " + previouslyFocusedRect + " ,start");
+//        boolean result = super.onRequestFocusInDescendants(direction, previouslyFocusedRect);
+//        Log.i("FocusTestActivity", "onRequestFocusInDescendants: " + getTag() + ", previouslyFocusedRect: " + previouslyFocusedRect + " ,result: " + result);
+//        return result;
+        getChildAt(1).requestFocus();
+        return true;
     }
 
     @Override
     public boolean requestFocus(int direction, Rect previouslyFocusedRect) {
+        Log.i("FocusTestActivity", "requestFocus: " + getTag() + " ,start");
         boolean result = super.requestFocus(direction, previouslyFocusedRect);
         Log.i("FocusTestActivity", "requestFocus: " + getTag() + ", previouslyFocusedRect: " + previouslyFocusedRect + " ,result: " + result);
         return result;
