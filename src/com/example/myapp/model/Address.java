@@ -8,10 +8,9 @@ import org.litepal.crud.DataSupport;
  */
 public class Address extends DataSupport{
 
-    @Column(nullable = false)
     private int id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = false)
     private String value = null;
 
     @Column(nullable = false)
@@ -19,6 +18,12 @@ public class Address extends DataSupport{
 
     @Column(nullable = false, defaultValue = "test")
     private String orderId = null;
+
+    @Column(ignore = true)
+    private String test;
+
+    @Column(nullable = true, defaultValue = "test2")
+    private String test2;
 
     public String getValue() {
         return value;
@@ -50,5 +55,21 @@ public class Address extends DataSupport{
 
     public void setOrderId(String orderId) {
         this.orderId = orderId;
+    }
+
+    public String getTest() {
+        return test;
+    }
+
+    public void setTest(String test) {
+        this.test = test;
+    }
+
+    public String getTest2() {
+        return test2;
+    }
+
+    public void setTest2(String test2) {
+        this.test2 = test2;
     }
 }

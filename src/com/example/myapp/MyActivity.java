@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
+import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -42,6 +44,36 @@ public class MyActivity extends Activity {
         int densityDpi = dm.densityDpi;
         Log.i(TAG, "densityDpi: " + densityDpi);
         Log.i(TAG, "density: " + dm.density);
+
+
+        Log.i(TAG, "CODENAME: " + Build.VERSION.CODENAME);
+        Log.i(TAG, "BOARD: " + Build.BOARD);
+        Log.i(TAG, "DEVICE: " + Build.DEVICE);
+        Log.i(TAG, "DISPLAY: " + Build.DISPLAY);
+        Log.i(TAG, "FINGERPRINT: " + Build.FINGERPRINT);
+        Log.i(TAG, "HARDWARE: " + Build.HARDWARE);
+        Log.i(TAG, "MANUFACTURER: " + Build.MANUFACTURER);
+        Log.i(TAG, "MODEL: " + Build.MODEL);
+        Log.i(TAG, "PRODUCT: " + Build.PRODUCT);
+        Log.i(TAG, "SERIAL: " + Build.SERIAL);
+        Log.i(TAG, "TYPE: " + Build.TYPE);
+        Log.i(TAG, "USER: " + Build.USER);
+
+        Log.i(TAG, "densityDpi: " + densityDpi);
+        Log.i(TAG, "density: " + dm.density);
+
+        Log.i(TAG, "heightPixels: " + dm.heightPixels);
+        Log.i(TAG, "widthPixels: " + dm.widthPixels);
+        Log.i(TAG, "scaledDensity: " + dm.scaledDensity);
+        Log.i(TAG, "xdpi: " + dm.xdpi);
+        Log.i(TAG, "ydpi: " + dm.ydpi);
+
+        Configuration config = getResources().getConfiguration();
+
+        Log.i(TAG, "screenHeightDp: " + config.screenHeightDp);
+        Log.i(TAG, "screenWidthDp: " + config.screenWidthDp);
+
+
 
         ViewGroup root = (ViewGroup)findViewById(R.id.root);
 

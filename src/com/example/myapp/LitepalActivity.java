@@ -39,7 +39,7 @@ public class LitepalActivity extends Activity {
             StringBuilder sb = new StringBuilder();
             int i = 0;
             for(Address a : allSongs){
-                sb.append(String.format("id(%d) value(%s) time(%s) orderId(%s)", a.getId(), a.getValue(), a.getTimestamp(), a.getOrderId())).append("\r\n");
+                sb.append(String.format("id(%d) value(%s) time(%s) orderId(%s) test2(%s)", a.getId(), a.getValue(), a.getTimestamp(), a.getOrderId(), a.getTest2())).append("\r\n");
                 if(i++ == 3){
                     id = a.getId();
                 }
@@ -51,7 +51,7 @@ public class LitepalActivity extends Activity {
     public void doAdd(View view){
         Log.i(TAG, "doadd");
         Address a = new Address();
-        a.setValue(String.valueOf(index++));
+        a.setValue("value");
         a.setTimestamp(String.valueOf(System.currentTimeMillis() / 1000));
         a.save();
     }
