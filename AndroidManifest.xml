@@ -89,6 +89,7 @@
         <activity android:name=".CoordsTestActivity"/>
         <activity android:name=".FragmentTestActivity"/>
         <activity android:name=".PagerActivity"/>
+        <activity android:name=".SlideActivity"/>
         <receiver android:name=".MyReceiver">
             <intent-filter>
                 <action android:name="com.example.myapp.Action.TEST"/>
