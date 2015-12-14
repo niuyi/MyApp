@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
+import android.view.View;
 import com.example.myapp.fragment.TestText2Fragment;
 
 /**
@@ -14,6 +16,7 @@ import com.example.myapp.fragment.TestText2Fragment;
 public class PagerActivity extends FragmentActivity {
 
     private ViewPager mPager;
+    private static final float MIN_SCALE = 0.75f;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,26 @@ public class PagerActivity extends FragmentActivity {
 
         mPager = (ViewPager) findViewById(R.id.pager);
         mPager.setAdapter(new MyAdapter(getSupportFragmentManager()));
+        mPager.setPageTransformer(true, new ViewPager.PageTransformer() {
+            @Override
+            public void transformPage(View view, float position) {
+                Log.i("mPager", "transformPage: " + position);
+                int pageWidth = view.getWidth();
+
+                if (position < -1) { // [-∞ ,-1)
+// 这一页已经是最左边的屏幕页
+                    view.setAlpha(0);
+                } else if (position <= 0) { // [-1,0]
+                    view.setAlpha(1 - Math.abs(position));
+                    view.setTranslationX(pageWidth * -position);
+                } else if (position <= 1) { // (0,1]
+                    view.setAlpha(1 - position);
+                    view.setTranslationX(pageWidth * -position);
+                } else { // (1,+∞]
+                    view.setAlpha(0);
+                }
+            }
+        });
     }
 
     private class MyAdapter extends FragmentStatePagerAdapter{

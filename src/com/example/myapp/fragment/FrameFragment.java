@@ -26,6 +26,26 @@ public class FrameFragment extends Fragment {
         View view = inflater.inflate(R.layout.frame_fragment, container, false);
         ViewPager pager = (ViewPager)view.findViewById(R.id.viewPager);
         pager.setAdapter(new MyAdapter(getActivity().getFragmentManager()));
+        pager.setPageTransformer(true, new ViewPager.PageTransformer() {
+            @Override
+            public void transformPage(View view, float position) {
+                Log.i("mPager", "transformPage: " + position);
+                int pageWidth = view.getWidth();
+
+                if (position < -1) { // [-∞ ,-1)
+// 这一页已经是最左边的屏幕页
+                    view.setAlpha(0);
+                } else if (position <= 0) { // [-1,0]
+                    view.setAlpha(1 - Math.abs(position));
+                    view.setTranslationX(pageWidth * -position);
+                } else if (position <= 1) { // (0,1]
+                    view.setAlpha(1 - position);
+                    view.setTranslationX(pageWidth * -position);
+                } else { // (1,+∞]
+                    view.setAlpha(0);
+                }
+            }
+        });
         pager.requestFocus();
         return view;
     }
