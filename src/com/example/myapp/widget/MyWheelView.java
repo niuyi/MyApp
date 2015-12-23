@@ -1,6 +1,8 @@
 package com.example.myapp.widget;
 
 import android.content.Context;
+import android.content.res.TypedArray;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -18,69 +20,117 @@ import java.util.List;
  */
 public class MyWheelView extends LinearLayout {
 
-    private MyWheelViewAdapter mAdapter = new MyWheelViewAdapter();
+    private static final String TAG = "MyWheelView";
+    private WheelAdapter mAdapter;
 
+    private int mCount = 5;
+    private int mMid = 2;
     private int mCurrentIndex = 0;
-
-    public MyWheelView(Context context) {
-        super(context);
-        init(context);
-    }
 
     public MyWheelView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context);
+        init(context, attrs);
     }
 
     public MyWheelView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(context);
+        init(context, attrs);
     }
 
-    private void init(Context context) {
-        LinearLayout.LayoutParams paras = new LinearLayout.LayoutParams(400, 100);
+    private void init(Context context, AttributeSet attrs) {
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MyWheelView);
+        mCount = typedArray.getInteger(R.styleable.MyWheelView_itemCount, 5);
+        mMid = mCount/2;
+
+        int itemHeight = typedArray.getDimensionPixelSize(R.styleable.MyWheelView_itemHeight, 100);
+        int itemWidth = typedArray.getDimensionPixelSize(R.styleable.MyWheelView_itemWidth, 400);
+        int size1 = typedArray.getDimensionPixelSize(R.styleable.MyWheelView_itemTextSize1, 36);
+        int size2 = typedArray.getDimensionPixelSize(R.styleable.MyWheelView_itemTextSize2, 42);
+        int resourceId = typedArray.getResourceId(R.styleable.MyWheelView_focusButtonDrawable, R.drawable.btn_normal2);
+
+        typedArray.recycle();
+
+        LinearLayout.LayoutParams paras = new LinearLayout.LayoutParams(itemWidth, itemHeight);
         paras.gravity = Gravity.CENTER;
-        for(int i = 0 ; i < 5 ; i ++){
+        for(int i = 0 ; i < mCount ; i ++){
             TextView textView = new TextView(context);
             textView.setGravity(Gravity.CENTER);
+            textView.setSingleLine(true);
+            textView.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+            textView.setMarqueeRepeatLimit(-1);
 
-            if(i == 2){
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, 42);
+            if(i == mMid){
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, size2);
                 textView.setFocusable(true);
-                textView.setBackgroundResource(R.drawable.btn_normal);
+                textView.setBackgroundResource(resourceId);
                 textView.setOnKeyListener(new OnKeyListener() {
                     @Override
                     public boolean onKey(View v, int keyCode, KeyEvent event) {
                         if(keyCode == KeyEvent.KEYCODE_DPAD_DOWN && event.getAction() == KeyEvent.ACTION_DOWN){
-                            mCurrentIndex ++;
-                            if(mCurrentIndex > mAdapter.getItemsCount() - 1){
-                                mCurrentIndex = 0;
+                            int newIndex = getNewIndex(mCurrentIndex + 1);
+                            android.util.Log.i(TAG, "onKey: newIndex: " + newIndex + " mCurrentIndex: " + mCurrentIndex);
+                            if(newIndex != mCurrentIndex){
+                                mCurrentIndex = newIndex;
+                                initView();
+                                if(mListener != null){
+                                    mListener.onSelectedChanged(mCurrentIndex);
+                                }
                             }
-
-                            initView();
-
                         }else if(keyCode == KeyEvent.KEYCODE_DPAD_UP && event.getAction() == KeyEvent.ACTION_DOWN){
-                            mCurrentIndex --;
-
-                            if(mCurrentIndex < 0){
-                                mCurrentIndex = mAdapter.getItemsCount() - 1;
+                            int newIndex = getNewIndex(mCurrentIndex - 1);
+                            android.util.Log.i(TAG, "onKey: newIndex: " + newIndex + " mCurrentIndex: " + mCurrentIndex);
+                            if(newIndex != mCurrentIndex){
+                                mCurrentIndex = newIndex;
+                                initView();
+                                if(mListener != null){
+                                    mListener.onSelectedChanged(mCurrentIndex);
+                                }
                             }
-
-                            initView();
                         }
                         return false;
                     }
                 });
             }else{
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, 36);
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, size1);
                 textView.setAlpha((float) 0.7);
                 textView.setFocusable(false);
             }
 
             addView(textView, paras);
         }
+    }
 
+    public void setAdapter(WheelAdapter adapter){
+        mAdapter = adapter;
+        if(mAdapter.getItemsCount() <= mCount){
+            mCurrentIndex = mAdapter.getItemsCount()/2;
+        }else{
+            mCurrentIndex = 0;
+        }
         initView();
+    }
+
+    private int getNewIndex(int index){
+        boolean needLoop = mAdapter.getItemsCount() > mCount;
+        int ret = index;
+        if(index > mAdapter.getItemsCount() - 1){
+            if(needLoop){
+                ret = index;
+            }else{
+                ret = index - 1;
+            }
+        }
+
+        if(index < 0){
+            if(needLoop){
+                ret = mAdapter.getItemsCount() - 1;
+            }else{
+                ret = 0;
+            }
+        }
+
+        android.util.Log.i(TAG, "getNewIndex: " + index + " ret: " + ret);
+        return ret;
     }
 
     private void initView(){
@@ -92,16 +142,45 @@ public class MyWheelView extends LinearLayout {
     }
 
     private String[] getTexts(int index){
-        String[] resutls = new String[5];
+        String[] results = new String[mCount];
 
         int size = mAdapter.getItemsCount();
-        resutls[0] = mAdapter.getItem(getIndex(index - 2, size));
-        resutls[1] = mAdapter.getItem(getIndex(index - 1, size));
-        resutls[2] = mAdapter.getItem(index);
-        resutls[3] = mAdapter.getItem(getIndex(index + 1, size));
-        resutls[4] = mAdapter.getItem(getIndex(index + 2, size));
 
-        return resutls;
+        if(size <= mCount){
+            int newMid = index;
+            for(int i = 0 ; i < mCount ; i ++){
+                results[i] = mAdapter.getItem(i - (mMid - newMid));
+            }
+        }else{
+            for(int i = 0 ; i < mCount ; i ++){
+
+                int diff = mMid - i;
+                if(Math.abs(diff) >= size){
+                    results[i] = mAdapter.getItem(diff);
+                }else{
+                    results[i] = mAdapter.getItem(getIndex(index - diff, size));
+                }
+            }
+        }
+
+
+//        for(int i = 0 ; i < mMid ; i ++){
+//            results[i] = mAdapter.getItem(getIndex(index - (mMid - i), size));
+//        }
+//
+//        results[mMid] = mAdapter.getItem(index);
+//
+//        for(int i = mMid + 1 ; i < mCount ; i ++){
+//            results[3] = mAdapter.getItem(getIndex(index + (i - mMid), size));
+//        }
+//
+//        results[0] = mAdapter.getItem(getIndex(index - 2, size));
+//        results[1] = mAdapter.getItem(getIndex(index - 1, size));
+//        results[2] = mAdapter.getItem(index);
+//        results[3] = mAdapter.getItem(getIndex(index + 1, size));
+//        results[4] = mAdapter.getItem(getIndex(index + 2, size));
+
+        return results;
     }
 
     private int getIndex(int index, int size){
@@ -114,42 +193,7 @@ public class MyWheelView extends LinearLayout {
         return index;
     }
 
-    private int getIndex(int index, int diff, int size){
-        int result = index - diff;
-        if(result < 0){
-            result = size + result;
-        }
 
-        android.util.Log.i("MyWheelView", "get index : " + result);
-
-        return result;
-    }
-
-    class MyWheelViewAdapter implements WheelAdapter{
-
-        private List<String> list = new ArrayList<String>();
-
-        public MyWheelViewAdapter() {
-            for(int i = 0 ; i < 10 ; i ++){
-                list.add(String.valueOf(i));
-            }
-        }
-
-        @Override
-        public int getItemsCount() {
-            return list.size();
-        }
-
-        @Override
-        public String getItem(int index) {
-            return list.get(index);
-        }
-
-        @Override
-        public int getMaximumLength() {
-            return 0;
-        }
-    }
 
     public interface WheelAdapter {
         /**
@@ -173,5 +217,20 @@ public class MyWheelView extends LinearLayout {
          * @return the maximum item length or -1
          */
         int getMaximumLength();
+    }
+
+    @Override
+    public void setOnClickListener(OnClickListener l) {
+        getChildAt(mMid).setOnClickListener(l);
+    }
+
+    private MyWheelViewChangeSelectedListener mListener;
+
+    public void setListener(MyWheelViewChangeSelectedListener l) {
+        mListener = l;
+    }
+
+    public interface MyWheelViewChangeSelectedListener{
+        public void onSelectedChanged(int pos);
     }
 }

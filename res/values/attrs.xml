@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyWheelView">
+        <attr name="itemHeight" format="dimension"/>
+        <attr name="itemWidth" format="dimension"/>
+        <attr name="itemCount" format="integer"/>
+        <attr name="itemTextSize1" format="dimension"/>
+        <attr name="itemTextSize2" format="dimension"/>
+        <attr name="focusButtonDrawable" format="reference"/>
+    </declare-styleable>
+</resources>
