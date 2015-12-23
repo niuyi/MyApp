@@ -90,6 +90,7 @@
         <activity android:name=".FragmentTestActivity"/>
         <activity android:name=".PagerActivity"/>
         <activity android:name=".SlideActivity"/>
+        <activity android:name=".MyWheelActivity"/>
         <receiver android:name=".MyReceiver">
             <intent-filter>
                 <action android:name="com.example.myapp.Action.TEST"/>

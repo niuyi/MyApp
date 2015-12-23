@@ -22,7 +22,7 @@ public class CoordsTestActivity extends Activity {
         setContentView(R.layout.coords_activity);
         root = (ViewGroup)findViewById(R.id.root_container);
 
-        Button button = (Button)findViewById(R.id.btn_test);
+        final Button button = (Button)findViewById(R.id.btn_test);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
