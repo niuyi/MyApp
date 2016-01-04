@@ -19,7 +19,7 @@ public class MyActivity extends Activity {
 
     private static final String TAG = "MyActivity";
 
-    private String[] activities = new String[]{"MyWheelActivity", "WebViewActivity", "SlideActivity", "PagerActivity", "FragmentTestActivity","CoordsTestActivity", "FocusTestActivity", "LitepalActivity", "ServiceActivity", "AActivity", "HtmlActivity", "RListActivity", "ParcelableActivity", "ShakeActivity",
+    private String[] activities = new String[]{"TestActivityActivity", "MyWheelActivity", "WebViewActivity", "SlideActivity", "PagerActivity", "FragmentTestActivity","CoordsTestActivity", "FocusTestActivity", "LitepalActivity", "ServiceActivity", "AActivity", "HtmlActivity", "RListActivity", "ParcelableActivity", "ShakeActivity",
             "TextPushActivity",
             "TestViewActivity",
             "FocusActivity",

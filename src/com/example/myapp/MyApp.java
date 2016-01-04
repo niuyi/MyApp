@@ -1,6 +1,9 @@
 package com.example.myapp;
 
+import android.app.Activity;
 import android.app.Application;
+import android.os.Bundle;
+import android.util.Log;
 import com.baidu.location.*;
 import org.litepal.LitePalApplication;
 import com.baidu.location.LocationClient;
@@ -9,6 +12,8 @@ import com.baidu.location.LocationClient;
  * Created by linniu on 2015/10/31.
  */
 public class MyApp extends Application {
+
+    private static final String TAG = "MyApp";
 
     public static MyApp i = null;
 
@@ -26,6 +31,43 @@ public class MyApp extends Application {
         mLocationClient = new LocationClient(this.getApplicationContext());
         mMyLocationListener = new MyLocationListener();
         mLocationClient.registerLocationListener(mMyLocationListener);
+
+        this.registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
+            @Override
+            public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+                Log.i(TAG, "onActivityCreated: " + activity.getClass().getCanonicalName());
+            }
+
+            @Override
+            public void onActivityStarted(Activity activity) {
+                Log.i(TAG, "onActivityStarted: " + activity.getClass().getCanonicalName());
+            }
+
+            @Override
+            public void onActivityResumed(Activity activity) {
+                Log.i(TAG, "onActivityResumed: " + activity.getClass().getCanonicalName());
+            }
+
+            @Override
+            public void onActivityPaused(Activity activity) {
+                Log.i(TAG, "onActivityPaused: " + activity.getClass().getCanonicalName());
+            }
+
+            @Override
+            public void onActivityStopped(Activity activity) {
+                Log.i(TAG, "onActivityStopped: " + activity.getClass().getCanonicalName());
+            }
+
+            @Override
+            public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+                Log.i(TAG, "onActivitySaveInstanceState: " + activity.getClass().getCanonicalName());
+            }
+
+            @Override
+            public void onActivityDestroyed(Activity activity) {
+                Log.i(TAG, "onActivityDestroyed: " + activity.getClass().getCanonicalName());
+            }
+        });
     }
 
     public class MyLocationListener implements BDLocationListener {

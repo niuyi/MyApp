@@ -2,6 +2,7 @@ package com.example.myapp.widget;
 
 import android.content.Context;
 import android.graphics.Rect;
+import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -63,4 +64,12 @@ public class MyButton extends Button {
         Log.i("FocusTestActivity", "onFocusChanged: " + getTag() + " ,focused: " + focused);
         super.onFocusChanged(focused, direction, previouslyFocusedRect);
     }
+
+    @Override
+    public Parcelable onSaveInstanceState() {
+        Log.i("MyButton", "onSaveInstanceState");
+        return super.onSaveInstanceState();
+    }
+
+
 }
