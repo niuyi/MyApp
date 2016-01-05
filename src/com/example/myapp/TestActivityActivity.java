@@ -6,25 +6,44 @@ import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by linniu on 2016/1/4.
  */
 public class TestActivityActivity extends Activity {
     private static final String TAG = "TestActivityActivity";
+    private ImageView iv;
+    private EditText editText;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         Log.i(TAG, "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_activity);
+
+        editText = (EditText)findViewById(R.id.test_et);
+
+//        iv = (ImageView)findViewById(R.id.test_iv); g9o
+//
+//        Picasso.with(this).load("http://10.235.177.8:9025/refound/code?deviceId=024d2dd6cf4a47349eb2fb5684224acc0&platformId=601").into(iv);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         Log.i(TAG, "onRestoreInstanceState");
+
+        Parcelable data = savedInstanceState.getParcelable("editText");
+        if(data != null){
+            editText.onRestoreInstanceState(data);
+        }
+
         super.onRestoreInstanceState(savedInstanceState);
     }
 
@@ -77,6 +96,9 @@ public class TestActivityActivity extends Activity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         Log.i(TAG, "onSaveInstanceState");
+        Parcelable parcelable = editText.onSaveInstanceState();
+        outState.putParcelable("editText", parcelable);
+
         super.onSaveInstanceState(outState);
     }
 
@@ -128,5 +150,14 @@ public class TestActivityActivity extends Activity {
     public void onConfigurationChanged(Configuration newConfig) {
         Log.i(TAG, "onConfigurationChanged");
         super.onConfigurationChanged(newConfig);
+    }
+
+    public void doTest(View view){
+        Intent intent = new Intent();
+        Log.e(TAG, "no, intent!!!!!!!");
+        //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setAction("xiaomi.mitv.shop.action.ORDER_DETAIL_ACTIVITY");
+        intent.putExtra("intent.shop.orderid","5151231129160966");
+        startActivityForResult(intent,0);
     }
 }

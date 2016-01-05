@@ -42,15 +42,15 @@ public class MyWheelActivity extends Activity {
             }
         });
 
-        view.setListener(new MyWheelView.MyWheelViewChangeSelectedListener() {
-            @Override
-            public void onSelectedChanged(int pos) {
-                android.util.Log.i("MyWheelView", "onSelectedChanged: " + pos);
-                if(pos == 2){
-                    view2.setAdapter(new MyWheelViewAdapter(3));
-                }
-            }
-        });
+//        view.setListener(new MyWheelView.MyWheelViewChangeSelectedListener() {
+//            @Override
+//            public void onSelectedChanged(int pos) {
+//                android.util.Log.i("MyWheelView", "onSelectedChanged: " + pos);
+//                if(pos == 2){
+//                    view2.setAdapter(new MyWheelViewAdapter(3));
+//                }
+//            }
+//        });
 
     }
 
