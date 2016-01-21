@@ -2214,6 +2214,11 @@ public final class GridLayoutManager extends RecyclerView.LayoutManager {
             Log.v(getTag(), "getAlignedPosition " + scrollPrimary + " " + scrollSecondary
                     + " " + mWindowAlignment);
         }
+
+        Log.i(TAG, "getAlignedPosition " + scrollPrimary + " " + scrollSecondary
+                + " " + mWindowAlignment);
+
+        Log.i(TAG, "getAlignedPositionM " + mScrollOffsetPrimary + " " + mScrollOffsetSecondary);
         scrollPrimary -= mScrollOffsetPrimary;
         scrollSecondary -= mScrollOffsetSecondary;
         if (scrollPrimary != 0 || scrollSecondary != 0) {
@@ -2225,6 +2230,7 @@ public final class GridLayoutManager extends RecyclerView.LayoutManager {
     }
 
     private void scrollGrid(int scrollPrimary, int scrollSecondary, boolean smooth) {
+        Log.i(TAG,"scrollGrid: " + scrollPrimary + "scrollSecondary:"  + scrollSecondary);
         if (mInLayout) {
             scrollDirectionPrimary(scrollPrimary);
             scrollDirectionSecondary(scrollSecondary);

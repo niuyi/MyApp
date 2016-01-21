@@ -3,6 +3,7 @@ package com.example.myapp;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import com.example.myapp.widget.GridLayoutManager;
+import com.example.myapp.widget.OnChildSelectedListener;
 import com.example.myapp.widget.VerticalGridView;
 
 import java.util.ArrayList;
@@ -26,12 +28,15 @@ public class RListActivity extends Activity implements VerticalGridView.FocusSea
     private VerticalGridView list;
     private MyAdapter adapter;
 
+    private Handler handler = new Handler();
+    private int offset = 240;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.r_list_activity);
 
-        button = (Button)findViewById(R.id.test_btn);
+//        button = (Button)findViewById(R.id.test_btn);
 
         list = (VerticalGridView)findViewById(R.id.list_view);
         list.setFocusable(true);
@@ -41,11 +46,43 @@ public class RListActivity extends Activity implements VerticalGridView.FocusSea
         list.setAdapter(adapter);
 
 
+        list.setSelectedPosition(1);
 
+        list.setOnChildSelectedListener(new OnChildSelectedListener() {
+            @Override
+            public void onChildSelected(ViewGroup parent, View view, int position, long id) {
+                Log.i(TAG, "onChildSelected: " + view.getClass() + " , pos: " + position + " id: " + id + " bottom: " + view.getBottom());
+
+//                try {
+//                    Log.i(TAG, "onChildSelected2: " + list.getChildAt(position + 1).getBottom()) ;
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+                if (position == 2) {
+                    offset = offset - 1;
+                    Log.i(TAG, "offset: " + offset); //240 - 230 -- 234
+                    list.setItemAlignmentOffset(offset);
+                } else {
+                    list.setItemAlignmentOffset(0);
+                }
+            }
+        });
+
+//        list.setFocusScrollStrategy(VerticalGridView.FOCUS_SCROLL_ITEM);
+        list.computeVerticalScrollOffset();
 
 //        list.setFocusSearchListener(this);
 
 //        list.requestFocus();
+
+        handler.postDelayed(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        Log.i(TAG, "getItemAlignmentOffset: " + list.getItemAlignmentOffset());
+                    }
+                },1000
+        );
     }
 
     @Override
@@ -92,7 +129,7 @@ public class RListActivity extends Activity implements VerticalGridView.FocusSea
 
         List<String> list = new ArrayList<String>();
         public MyAdapter() {
-            for(int i = 0 ; i < 10 ; i++){
+            for(int i = 0 ; i < 4 ; i++){
                 list.add("Test: " + i);
             }
         }
@@ -106,9 +143,12 @@ public class RListActivity extends Activity implements VerticalGridView.FocusSea
             view.setFocusable(false);
             view.setBackground(getResources().getDrawable(R.drawable.btn_normal));
 
-            GridLayoutManager.LayoutParams para = new GridLayoutManager.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 150);
+            int h = 300;
+            if(i == 100){
+                h = 500;
+            }
+            GridLayoutManager.LayoutParams para = new GridLayoutManager.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, h);
             view.setLayoutParams(para);
-
 //            tv.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 //                @Override
 //                public void onFocusChange(View v, boolean hasFocus) {
@@ -136,6 +176,15 @@ public class RListActivity extends Activity implements VerticalGridView.FocusSea
         public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
             MyViewHolder holder = (MyViewHolder)viewHolder;
             holder.tv.setText(list.get(i));
+        }
+
+        @Override
+        public int getItemViewType(int position) {
+            if(position >= 2){
+                return 100;
+            }
+
+            return 1;
         }
 
         @Override
