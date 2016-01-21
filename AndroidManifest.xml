@@ -91,7 +91,7 @@
         <activity android:name=".PagerActivity"/>
         <activity android:name=".SlideActivity"/>
         <activity android:name=".MyWheelActivity"/>
-        <activity android:name=".TestActivityActivity" android:configChanges="orientation"/>
+        <activity android:name=".TestActivityActivity" android:configChanges="orientation" android:exported="true" android:launchMode="singleTask"/>
         <receiver android:name=".MyReceiver">
             <intent-filter>
                 <action android:name="com.example.myapp.Action.TEST"/>
@@ -100,7 +100,9 @@
                 <category android:name="com.example.myapp.category.TEST2"/>
             </intent-filter>
         </receiver>
-        <service android:name=".BookService" android:process=":remote"/>
+        <service android:name=".BookService"/>
+
+        <provider android:authorities="com.example.myapp.MyProvider" android:name="com.example.myapp.MyProvider"/>
 
         <service
                 android:name="com.baidu.location.f"

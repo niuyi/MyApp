@@ -21,6 +21,7 @@ public class MyBookManager extends IBookManager.Stub {
 
     @Override
     public String getId() throws RemoteException {
+        Log.i(TAG, String.format("getId: pid(%d) tid(%d)", android.os.Process.myPid() ,  Thread.currentThread().getId()));
         return "myid";
     }
 

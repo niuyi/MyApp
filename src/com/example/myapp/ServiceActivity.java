@@ -1,10 +1,7 @@
 package com.example.myapp;
 
 import android.app.Activity;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.ServiceConnection;
+import android.content.*;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -12,6 +9,7 @@ import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import com.example.myapp.aidl.Book;
 import com.example.myapp.aidl.IBookManager;
 import com.example.myapp.aidl.IListener;
@@ -30,6 +28,8 @@ public class ServiceActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.service_activity);
         Log.i(TAG, "main thread: " + Thread.currentThread().getId());
+
+        ((ViewGroup)getWindow().getDecorView().findViewById(android.R.id.content)).getChildAt(0);
     }
 
     @Override
@@ -95,6 +95,20 @@ public class ServiceActivity extends Activity {
         bindService(in, conn, Context.BIND_AUTO_CREATE);
     }
 
+    public void onTest2(View view){
+        new Thread(){
+            @Override
+            public void run() {
+                Log.i(TAG, String.format("onTest2!: pid(%d) tid(%d)", android.os.Process.myPid(), Thread.currentThread().getId()));
+                try {
+                    Log.i(TAG, "getid: " + manager.getId());
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+    }
+
     private IListener listener = new IListener.Stub(){
 
 
@@ -104,4 +118,23 @@ public class ServiceActivity extends Activity {
             Log.i(TAG, String.format("onUpdate!: pid(%d) tid(%d)", android.os.Process.myPid(), Thread.currentThread().getId()));
         }
     };
+
+    public void onTestProvider1(View view){
+        Log.i(TAG, String.format("onTestProvider1!: pid(%d) tid(%d)", android.os.Process.myPid(), Thread.currentThread().getId()));
+        ContentProviderClient client = getContentResolver().acquireContentProviderClient("com.example.myapp.MyProvider");
+        try {
+            client.query(null, null, null, null,null);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void onTestProvider2(View view){
+        new Thread(){
+            @Override
+            public void run() {
+                onTestProvider1(null);
+            }
+        }.start();
+    }
 }

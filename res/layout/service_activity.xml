@@ -6,5 +6,8 @@
 
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="test" android:onClick="onTest"/>
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="test2" android:onClick="onUnbind"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="test3" android:onClick="onTest2"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="testProvider1" android:onClick="onTestProvider1"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="testProvider2" android:onClick="onTestProvider2"/>
 
 </LinearLayout>
