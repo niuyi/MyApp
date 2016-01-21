@@ -48,6 +48,9 @@ public class RListActivity extends Activity implements VerticalGridView.FocusSea
 
         list.setSelectedPosition(1);
 
+
+//        list.setWindowAlignment(list.WINDOW_ALIGN_HIGH_EDGE);
+
         list.setOnChildSelectedListener(new OnChildSelectedListener() {
             @Override
             public void onChildSelected(ViewGroup parent, View view, int position, long id) {
@@ -58,31 +61,45 @@ public class RListActivity extends Activity implements VerticalGridView.FocusSea
 //                } catch (Exception e) {
 //                    e.printStackTrace();
 //                }
-                if (position == 2) {
-                    offset = offset - 1;
-                    Log.i(TAG, "offset: " + offset); //240 - 230 -- 234
-                    list.setItemAlignmentOffset(offset);
+                if (position == 2) { // bottom 765
+//                    offset = offset - 1;
+//                    Log.i(TAG, "offset: " + offset); //240 - 230 -- 234
+                    list.setItemAlignmentOffset(210); // 500 - (1080 - 500)/2
                 } else {
                     list.setItemAlignmentOffset(0);
                 }
+
+                handler.postDelayed(
+                        new Runnable() {
+                            @Override
+                            public void run() {
+                                Log.i(TAG, "view bottom: " + view.getBottom());
+                            }
+                        },1000
+                );
             }
         });
 
 //        list.setFocusScrollStrategy(VerticalGridView.FOCUS_SCROLL_ITEM);
-        list.computeVerticalScrollOffset();
+//        list.computeVerticalScrollOffset();
+
 
 //        list.setFocusSearchListener(this);
 
 //        list.requestFocus();
 
-        handler.postDelayed(
-                new Runnable() {
-                    @Override
-                    public void run() {
-                        Log.i(TAG, "getItemAlignmentOffset: " + list.getItemAlignmentOffset());
-                    }
-                },1000
-        );
+//        handler.postDelayed(
+//                new Runnable() {
+//                    @Override
+//                    public void run() {
+//<<<<<<< HEAD
+//                        Log.i(TAG, "getItemAlignmentOffset: " + list.getItemAlignmentOffset());
+//=======
+//                        Log.i(TAG, "view bottom: " + list.getSelectedPosition());
+//>>>>>>> add list activity
+//                    }
+//                },1000
+//        );
     }
 
     @Override
