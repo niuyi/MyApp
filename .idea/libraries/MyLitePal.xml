@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MyLitePal">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/MyLitePal.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

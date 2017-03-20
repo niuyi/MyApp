@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\line.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable\\line.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_5.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable\\shape_5.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_4.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable\\shape_4.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_3.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable\\shape_3.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_2.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable\\shape_2.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_1.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable\\shape_1.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_normal2.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable\\btn_normal2.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_normal.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable\\btn_normal.xml"
+    }
+]

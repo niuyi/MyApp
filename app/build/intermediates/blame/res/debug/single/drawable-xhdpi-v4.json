@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\button.9.png",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable-xhdpi\\button.9.png"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_off.9.png",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable-xhdpi\\icon_off.9.png"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\app_sample_code.png",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable-xhdpi\\app_sample_code.png"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\icon_on.9.png",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\drawable-xhdpi\\icon_on.9.png"
+    }
+]

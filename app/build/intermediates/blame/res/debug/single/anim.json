@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\push_up_in.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\anim\\push_up_in.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\shake.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\anim\\shake.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\cycle_5.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\anim\\cycle_5.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\push_up_out.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\anim\\push_up_out.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\hyperspace_in.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\anim\\hyperspace_in.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\anim\\hyperspace_out.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\anim\\hyperspace_out.xml"
+    }
+]

@@ -1,0 +1,138 @@
+[
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\litepal_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\litepal_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\webview_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\webview_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\a_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\a_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\window_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\window_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\coords_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\coords_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\focus_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\focus_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\list_item.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\b_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\b_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\frame_fragment.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\frame_fragment.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\r_list_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\r_list_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\location_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\location_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\parcelable_test.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\parcelable_test.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\focus_test_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\focus_test_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\shake.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\shake.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\test_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test1_frag.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\test1_frag.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\scroll2.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\scroll2.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_test.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\fragment_test.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_view_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\test_view_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_view.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\test_view.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\c_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\c_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\layout_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\html_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\html_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pager_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\pager_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\shape_drawable_1.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\shape_drawable_1.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\scroll_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\scroll_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\text_item.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\text_item.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\slide_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\slide_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\service_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\service_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\my_wheel_activity.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\my_wheel_activity.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_text_fragment.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\test_text_fragment.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\push_text.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\push_text.xml"
+    },
+    {
+        "merged": "D:\\Code\\github\\MyApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_ball.xml",
+        "source": "D:\\Code\\github\\MyApp\\app\\src\\main\\res\\layout\\test_ball.xml"
+    }
+]

@@ -1,0 +1,223 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .gitignore
+* .idea\
+* .idea\.name
+* .idea\compiler.xml
+* .idea\copyright\
+* .idea\copyright\profiles_settings.xml
+* .idea\encodings.xml
+* .idea\libraries\
+* .idea\libraries\libs.xml
+* .idea\misc.xml
+* .idea\modules.xml
+* .idea\uiDesigner.xml
+* .idea\vcs.xml
+* .idea\workspace.xml
+* MyApp.iml
+* ant.properties
+* build.xml
+* out\
+* out\artifacts\
+* out\artifacts\MyAppSigned\
+* out\artifacts\MyAppSigned\MyAppSigned.apk
+* out\production\
+* out\production\MyApp\
+* out\production\MyApp\MyApp.apk
+* out\production\MyApp\MyApp.unaligned.apk
+* out\production\MyApp\com\
+* out\production\MyApp\com\example\
+* out\production\MyApp\com\example\myapp\
+* out\production\MyApp\com\example\myapp\AActivity.class
+* out\production\MyApp\com\example\myapp\ArcsActivity$MyView.class
+* out\production\MyApp\com\example\myapp\ArcsActivity.class
+* out\production\MyApp\com\example\myapp\BActivity.class
+* out\production\MyApp\com\example\myapp\BitmapActivity$BitmapView.class
+* out\production\MyApp\com\example\myapp\BitmapActivity.class
+* out\production\MyApp\com\example\myapp\BookService.class
+* out\production\MyApp\com\example\myapp\BuildConfig.class
+* out\production\MyApp\com\example\myapp\CActivity.class
+* out\production\MyApp\com\example\myapp\Cheeses.class
+* out\production\MyApp\com\example\myapp\ClipActivity$MyView.class
+* out\production\MyApp\com\example\myapp\ClipActivity.class
+* out\production\MyApp\com\example\myapp\CoordsTestActivity$1.class
+* out\production\MyApp\com\example\myapp\CoordsTestActivity.class
+* out\production\MyApp\com\example\myapp\DensityActivity.class
+* out\production\MyApp\com\example\myapp\DrawableActivity.class
+* out\production\MyApp\com\example\myapp\FocusActivity$1.class
+* out\production\MyApp\com\example\myapp\FocusActivity.class
+* out\production\MyApp\com\example\myapp\FocusTestActivity.class
+* out\production\MyApp\com\example\myapp\FontActivity$FontView.class
+* out\production\MyApp\com\example\myapp\FontActivity.class
+* out\production\MyApp\com\example\myapp\FragmentTestActivity.class
+* out\production\MyApp\com\example\myapp\HtmlActivity.class
+* out\production\MyApp\com\example\myapp\LayoutActivity$1.class
+* out\production\MyApp\com\example\myapp\LayoutActivity$2.class
+* out\production\MyApp\com\example\myapp\LayoutActivity$3.class
+* out\production\MyApp\com\example\myapp\LayoutActivity$4.class
+* out\production\MyApp\com\example\myapp\LayoutActivity$5.class
+* out\production\MyApp\com\example\myapp\LayoutActivity.class
+* out\production\MyApp\com\example\myapp\LitepalActivity.class
+* out\production\MyApp\com\example\myapp\LocationActivity.class
+* out\production\MyApp\com\example\myapp\Manifest$permission.class
+* out\production\MyApp\com\example\myapp\Manifest.class
+* out\production\MyApp\com\example\myapp\MeasureTextActivity$MyView.class
+* out\production\MyApp\com\example\myapp\MeasureTextActivity.class
+* out\production\MyApp\com\example\myapp\MyActivity$1.class
+* out\production\MyApp\com\example\myapp\MyActivity.class
+* out\production\MyApp\com\example\myapp\MyApp$1.class
+* out\production\MyApp\com\example\myapp\MyApp$MyLocationListener.class
+* out\production\MyApp\com\example\myapp\MyApp.class
+* out\production\MyApp\com\example\myapp\MyPaintActivity$MyView.class
+* out\production\MyApp\com\example\myapp\MyPaintActivity.class
+* out\production\MyApp\com\example\myapp\MyReceiver.class
+* out\production\MyApp\com\example\myapp\MyWheelActivity$1.class
+* out\production\MyApp\com\example\myapp\MyWheelActivity$MyWheelViewAdapter.class
+* out\production\MyApp\com\example\myapp\MyWheelActivity.class
+* out\production\MyApp\com\example\myapp\PagerActivity$1.class
+* out\production\MyApp\com\example\myapp\PagerActivity$MyAdapter.class
+* out\production\MyApp\com\example\myapp\PagerActivity.class
+* out\production\MyApp\com\example\myapp\ParcelableActivity$TestFragment.class
+* out\production\MyApp\com\example\myapp\ParcelableActivity.class
+* out\production\MyApp\com\example\myapp\R$anim.class
+* out\production\MyApp\com\example\myapp\R$attr.class
+* out\production\MyApp\com\example\myapp\R$dimen.class
+* out\production\MyApp\com\example\myapp\R$drawable.class
+* out\production\MyApp\com\example\myapp\R$fraction.class
+* out\production\MyApp\com\example\myapp\R$id.class
+* out\production\MyApp\com\example\myapp\R$integer.class
+* out\production\MyApp\com\example\myapp\R$layout.class
+* out\production\MyApp\com\example\myapp\R$string.class
+* out\production\MyApp\com\example\myapp\R$styleable.class
+* out\production\MyApp\com\example\myapp\R.class
+* out\production\MyApp\com\example\myapp\RListActivity$MyAdapter.class
+* out\production\MyApp\com\example\myapp\RListActivity$MyViewHolder$1.class
+* out\production\MyApp\com\example\myapp\RListActivity$MyViewHolder$2.class
+* out\production\MyApp\com\example\myapp\RListActivity$MyViewHolder.class
+* out\production\MyApp\com\example\myapp\RListActivity.class
+* out\production\MyApp\com\example\myapp\Scroll2Activity$1.class
+* out\production\MyApp\com\example\myapp\Scroll2Activity.class
+* out\production\MyApp\com\example\myapp\ScrollActivity.class
+* out\production\MyApp\com\example\myapp\ServiceActivity$1$1.class
+* out\production\MyApp\com\example\myapp\ServiceActivity$1.class
+* out\production\MyApp\com\example\myapp\ServiceActivity$2.class
+* out\production\MyApp\com\example\myapp\ServiceActivity.class
+* out\production\MyApp\com\example\myapp\ShakeActivity.class
+* out\production\MyApp\com\example\myapp\SlideActivity$LoadingFragment$1.class
+* out\production\MyApp\com\example\myapp\SlideActivity$LoadingFragment.class
+* out\production\MyApp\com\example\myapp\SlideActivity.class
+* out\production\MyApp\com\example\myapp\TestActivityActivity.class
+* out\production\MyApp\com\example\myapp\TestBallActivity$MyView.class
+* out\production\MyApp\com\example\myapp\TestBallActivity$ShapeHolder.class
+* out\production\MyApp\com\example\myapp\TestBallActivity.class
+* out\production\MyApp\com\example\myapp\TestDrawableActivity$MyView.class
+* out\production\MyApp\com\example\myapp\TestDrawableActivity.class
+* out\production\MyApp\com\example\myapp\TestViewActivity.class
+* out\production\MyApp\com\example\myapp\TextAlignActivity$TextView.class
+* out\production\MyApp\com\example\myapp\TextAlignActivity.class
+* out\production\MyApp\com\example\myapp\TextPushActivity.class
+* out\production\MyApp\com\example\myapp\WebViewActivity.class
+* out\production\MyApp\com\example\myapp\WindowActivity$1.class
+* out\production\MyApp\com\example\myapp\WindowActivity.class
+* out\production\MyApp\com\example\myapp\aidl\
+* out\production\MyApp\com\example\myapp\aidl\Book$1.class
+* out\production\MyApp\com\example\myapp\aidl\Book.aidl
+* out\production\MyApp\com\example\myapp\aidl\Book.class
+* out\production\MyApp\com\example\myapp\aidl\IBookManager$Stub$Proxy.class
+* out\production\MyApp\com\example\myapp\aidl\IBookManager$Stub.class
+* out\production\MyApp\com\example\myapp\aidl\IBookManager.aidl
+* out\production\MyApp\com\example\myapp\aidl\IBookManager.class
+* out\production\MyApp\com\example\myapp\aidl\IListener$Stub$Proxy.class
+* out\production\MyApp\com\example\myapp\aidl\IListener$Stub.class
+* out\production\MyApp\com\example\myapp\aidl\IListener.aidl
+* out\production\MyApp\com\example\myapp\aidl\IListener.class
+* out\production\MyApp\com\example\myapp\fragment\
+* out\production\MyApp\com\example\myapp\fragment\FrameFragment$1.class
+* out\production\MyApp\com\example\myapp\fragment\FrameFragment$ImageFragment.class
+* out\production\MyApp\com\example\myapp\fragment\FrameFragment$MyAdapter.class
+* out\production\MyApp\com\example\myapp\fragment\FrameFragment.class
+* out\production\MyApp\com\example\myapp\fragment\TestButtonFragment.class
+* out\production\MyApp\com\example\myapp\fragment\TestText2Fragment.class
+* out\production\MyApp\com\example\myapp\fragment\TestTextFragment.class
+* out\production\MyApp\com\example\myapp\model\
+* out\production\MyApp\com\example\myapp\model\Address.class
+* out\production\MyApp\com\example\myapp\model\MyBookManager$1.class
+* out\production\MyApp\com\example\myapp\model\MyBookManager.class
+* out\production\MyApp\com\example\myapp\model\MyData$1.class
+* out\production\MyApp\com\example\myapp\model\MyData.class
+* out\production\MyApp\com\example\myapp\widget\
+* out\production\MyApp\com\example\myapp\widget\BaseGridView$OnKeyInterceptListener.class
+* out\production\MyApp\com\example\myapp\widget\BaseGridView$OnMotionInterceptListener.class
+* out\production\MyApp\com\example\myapp\widget\BaseGridView$OnTouchInterceptListener.class
+* out\production\MyApp\com\example\myapp\widget\BaseGridView.class
+* out\production\MyApp\com\example\myapp\widget\GridLayoutManager$1.class
+* out\production\MyApp\com\example\myapp\widget\GridLayoutManager$2.class
+* out\production\MyApp\com\example\myapp\widget\GridLayoutManager$3.class
+* out\production\MyApp\com\example\myapp\widget\GridLayoutManager$LayoutParams.class
+* out\production\MyApp\com\example\myapp\widget\GridLayoutManager$SavedState$1.class
+* out\production\MyApp\com\example\myapp\widget\GridLayoutManager$SavedState.class
+* out\production\MyApp\com\example\myapp\widget\GridLayoutManager.class
+* out\production\MyApp\com\example\myapp\widget\ItemAlignment$Axis.class
+* out\production\MyApp\com\example\myapp\widget\ItemAlignment.class
+* out\production\MyApp\com\example\myapp\widget\ItemView.class
+* out\production\MyApp\com\example\myapp\widget\MyButton.class
+* out\production\MyApp\com\example\myapp\widget\MyEditText.class
+* out\production\MyApp\com\example\myapp\widget\MyLinearLayout.class
+* out\production\MyApp\com\example\myapp\widget\MyTextView.class
+* out\production\MyApp\com\example\myapp\widget\MyWheelView$1.class
+* out\production\MyApp\com\example\myapp\widget\MyWheelView$MyWheelViewChangeSelectedListener.class
+* out\production\MyApp\com\example\myapp\widget\MyWheelView$WheelAdapter.class
+* out\production\MyApp\com\example\myapp\widget\MyWheelView.class
+* out\production\MyApp\com\example\myapp\widget\OnChildSelectedListener.class
+* out\production\MyApp\com\example\myapp\widget\StaggeredGrid$Location.class
+* out\production\MyApp\com\example\myapp\widget\StaggeredGrid$Provider.class
+* out\production\MyApp\com\example\myapp\widget\StaggeredGrid$Row.class
+* out\production\MyApp\com\example\myapp\widget\StaggeredGrid.class
+* out\production\MyApp\com\example\myapp\widget\StaggeredGridDefault.class
+* out\production\MyApp\com\example\myapp\widget\VerticalGridView$FocusSearchListener.class
+* out\production\MyApp\com\example\myapp\widget\VerticalGridView.class
+* out\production\MyApp\com\example\myapp\widget\ViewsStateBundle.class
+* out\production\MyApp\com\example\myapp\widget\WindowAlignment$Axis.class
+* out\production\MyApp\com\example\myapp\widget\WindowAlignment.class
+* proguard-project.txt
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets\
+* libs\android-support-v13.jar => app\libs\android-support-v13.jar
+* libs\android-support-v7-recyclerview.jar => app\libs\android-support-v7-recyclerview.jar
+* libs\armeabi\liblocSDK6a.so => app\src\main\jniLibs\armeabi\liblocSDK6a.so
+* libs\locSDK_6.13.jar => app\libs\locSDK_6.13.jar
+* libs\MyLitePal.jar => app\libs\MyLitePal.jar
+* libs\picasso-2.5.2.jar => app\libs\picasso-2.5.2.jar
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+* src\com\example\myapp\aidl\Book.aidl => app\src\main\aidl\com\example\myapp\aidl\Book.aidl
+* src\com\example\myapp\aidl\IBookManager.aidl => app\src\main\aidl\com\example\myapp\aidl\IBookManager.aidl
+* src\com\example\myapp\aidl\IListener.aidl => app\src\main\aidl\com\example\myapp\aidl\IListener.aidl
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

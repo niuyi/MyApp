@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Code\github\MyApp\app\libs\android-support-v7-recyclerview.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="0b5adf926c097329904a2f263e7b51f259020634">
+        <dex dex="D:\Code\github\MyApp\app\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v7-recyclerview_53a8c574147f631eba4f0ce0cc4438d761907a88\classes.dex" />
+    </item>
+    <item
+        jar="D:\Code\github\MyApp\app\libs\android-support-v13.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="94c00ce88ca3ba7e8d94f1d9b7a7522343712c41">
+        <dex dex="D:\Code\github\MyApp\app\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v13_f6868218931bbd127c3f631b1129237ec25ccf83\classes.dex" />
+    </item>
+    <item
+        jar="D:\Code\github\MyApp\app\libs\MyLitePal.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="a7c21ccffa65d5f1e93c572e8857f813df626177">
+        <dex dex="D:\Code\github\MyApp\app\build\intermediates\transforms\dex\debug\folders\1000\2\MyLitePal_68fd514184fe22fe58322ab9177188cbe8901eb6\classes.dex" />
+    </item>
+    <item
+        jar="D:\Code\github\MyApp\app\libs\locSDK_6.13.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="2cdb37444b41b42e1ce5a8a27e5d3c22e1c57479">
+        <dex dex="D:\Code\github\MyApp\app\build\intermediates\transforms\dex\debug\folders\1000\2\locSDK_6.13_e518c1670661a6de1732be4b8ee4725bbdc2ffea\classes.dex" />
+    </item>
+    <item
+        jar="D:\Code\github\MyApp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="3a988a8050eda1f326988a135af1c2dc9366f50a">
+        <dex dex="D:\Code\github\MyApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_4905a335ce2d84bb4da43f01bbc97842c00ee623\classes.dex" />
+    </item>
+    <item
+        jar="D:\Code\github\MyApp\app\libs\picasso-2.5.2.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="D:\Code\github\MyApp\app\build\intermediates\transforms\dex\debug\folders\1000\2\picasso-2.5.2_aee37c044dd7785014b080691626f596ea95f002\classes.dex" />
+    </item>
+    <item
+        jar="D:\Code\github\MyApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="b22e7df45b0b9d77546dd06880ca2d5f9ab645ea">
+        <dex dex="D:\Code\github\MyApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_8989d1159208cb78b16f88e9169df70e3e0ec2d5\classes.dex" />
+    </item>
+
+</items>

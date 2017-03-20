@@ -1,0 +1,294 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:2:1-116:12
+	xmlns:android
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:2:11-69
+	package
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:3:11-38
+		INJECTED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:5:11-36
+		INJECTED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:4:11-34
+		INJECTED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:6:5-43
+	android:targetSdkVersion
+		INJECTED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:6:15-41
+		INJECTED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:8:5-66
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:8:22-64
+uses-permission#com.example.myapp.permission.TEST
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:9:5-72
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:9:22-70
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:11:5-97
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:12:5-95
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:12:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:13:5-92
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:13:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:14:5-95
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:14:22-76
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:15:5-92
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:15:22-73
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:16:5-91
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:16:22-72
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:17:5-97
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:17:22-78
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:19:5-100
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:19:22-81
+permission#com.example.myapp.permission.TEST
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:21:5-100
+	android:protectionLevel
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:21:66-98
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:21:17-65
+application
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:23:5-115:19
+	android:label
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:24:13-45
+	android:icon
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:25:13-49
+	android:theme
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:26:13-71
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:26:72-93
+activity#com.example.myapp.MyActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:27:9-33:20
+	android:label
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:28:19-51
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:27:19-44
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:29:13-32:29
+action#android.intent.action.MAIN
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:30:17-68
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:30:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:31:17-76
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:31:27-74
+meta-data#com.baidu.lbsapi.API_KEY
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:35:9-37:60
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:36:17-56
+	android:value
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:37:17-57
+activity#com.example.myapp.ShakeActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:39:9-49
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:39:19-47
+activity#com.example.myapp.TextPushActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:40:9-52
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:40:19-50
+activity#com.example.myapp.TestViewActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:41:9-53
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:41:19-51
+activity#com.example.myapp.FocusActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:42:9-50
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:42:19-48
+activity#com.example.myapp.WindowActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:43:9-51
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:43:19-49
+activity#com.example.myapp.ScrollActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:44:9-51
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:44:19-49
+activity#com.example.myapp.TestBallActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:45:9-53
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:45:19-51
+activity#com.example.myapp.LayoutActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:46:9-51
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:46:19-49
+activity#com.example.myapp.BitmapActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:47:9-51
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:47:19-49
+activity#com.example.myapp.FontActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:48:9-49
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:48:19-47
+activity#com.example.myapp.ArcsActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:49:9-49
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:49:19-47
+activity#com.example.myapp.ClipActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:50:9-49
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:50:19-47
+activity#com.example.myapp.DensityActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:51:9-52
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:51:19-50
+activity#com.example.myapp.DrawableActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:52:9-53
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:52:19-51
+activity#com.example.myapp.MyPaintActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:53:9-52
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:53:19-50
+activity#com.example.myapp.TestDrawableActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:54:9-57
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:54:19-55
+activity#com.example.myapp.MeasureTextActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:55:9-56
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:55:19-54
+activity#com.example.myapp.TextAlignActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:56:9-54
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:56:19-52
+activity#com.example.myapp.Scroll2Activity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:57:9-52
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:57:19-50
+activity#com.example.myapp.RListActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:58:9-50
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:58:19-48
+activity#com.example.myapp.ParcelableActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:59:9-55
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:59:19-53
+activity#com.example.myapp.HtmlActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:60:9-49
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:60:19-47
+activity#com.example.myapp.WebViewActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:61:9-52
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:61:19-50
+activity#com.example.myapp.AActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:67:9-46
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:67:19-44
+activity#com.example.myapp.BActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:68:9-83:20
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:68:19-44
+intent-filter#android.intent.category.DEFAULT+com.example.myapp.category.TEST+com.example.myapp.category.TEST2
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:69:13-75:25
+category#com.example.myapp.category.TEST
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:72:17-75
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:72:27-73
+category#com.example.myapp.category.TEST2
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:73:17-76
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:73:27-74
+category#android.intent.category.DEFAULT
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:74:17-75
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:74:27-73
+activity#com.example.myapp.CActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:84:9-47
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:84:19-44
+activity#com.example.myapp.ServiceActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:85:9-52
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:85:19-50
+activity#com.example.myapp.LitepalActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:86:9-52
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:86:19-50
+activity#com.example.myapp.FocusTestActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:87:9-54
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:87:19-52
+activity#com.example.myapp.LocationActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:88:9-53
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:88:19-51
+activity#com.example.myapp.CoordsTestActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:89:9-55
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:89:19-53
+activity#com.example.myapp.FragmentTestActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:90:9-57
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:90:19-55
+activity#com.example.myapp.PagerActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:91:9-50
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:91:19-48
+activity#com.example.myapp.SlideActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:92:9-50
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:92:19-48
+activity#com.example.myapp.MyWheelActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:93:9-52
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:93:19-50
+activity#com.example.myapp.TestActivityActivity
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:94:9-93
+	android:configChanges
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:94:56-91
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:94:19-55
+receiver#com.example.myapp.MyReceiver
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:95:9-102:20
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:95:19-45
+intent-filter#com.example.myapp.Action.TEST+com.example.myapp.category.TEST2
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:96:13-101:29
+action#com.example.myapp.Action.TEST
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:97:17-71
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:97:25-69
+service#com.example.myapp.BookService
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:103:9-73
+	android:process
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:103:46-71
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:103:18-45
+service#com.baidu.location.f
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:105:9-113:19
+	android:process
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:108:17-42
+	android:enabled
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:107:17-39
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:106:17-52
+intent-filter#com.baidu.location.service_v2.2
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:109:13-112:29
+action#com.baidu.location.service_v2.2
+ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:110:17-111:26
+	android:name
+		ADDED from D:\Code\github\MyApp\app\src\main\AndroidManifest.xml:110:25-71
